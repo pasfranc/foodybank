@@ -1,0 +1,42 @@
+{
+  "cli": {
+    "version": ">= 2.6.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "production": {
+      "env": {
+        "ANDROID_HOME": "/Users/pako/Library/Android/sdk"
+      },
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
